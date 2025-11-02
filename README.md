@@ -181,6 +181,38 @@ pnpm run start:prod
 }
 ```
 
+## 📚 API Documentation
+
+Postman Collection tersedia sebagai referensi untuk testing semua endpoint API.
+
+### Menggunakan Postman Collection
+
+1. **Import Collection**
+   - Buka Postman
+   - Klik "Import" → Pilih file `API_DOCS.postman_collection.json`
+   - Collection akan ter-import dengan semua endpoint yang tersedia
+
+2. **Setup Environment Variables**
+   Buat environment di Postman dengan variabel berikut:
+
+   ```
+   base_url = http://localhost:3000
+   access_token = (akan di-set otomatis setelah login)
+   refresh_token = (akan di-set otomatis setelah login)
+   post_id = (akan di-set otomatis setelah create post)
+   category_id = (akan di-set otomatis setelah create category)
+   comment_id = (akan di-set otomatis setelah create comment)
+   ```
+
+3. **Collection Structure**
+   - **AUTH**: Register, Login, Logout, Refresh Token
+   - **Categories**: CRUD operations untuk categories
+   - **Posts**: CRUD operations, search, filter untuk posts
+   - **Comments**: CRUD operations untuk comments
+
+4. **Auto-token Management**
+   Collection sudah dikonfigurasi untuk otomatis menyimpan `access_token` dan `refresh_token` setelah login/register, sehingga tidak perlu set manual untuk request berikutnya.
+
 ## 🧪 Testing
 
 ```bash
